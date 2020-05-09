@@ -2,8 +2,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
     const section = document.querySelectorAll('.section');
     const next = document.querySelector('#next');
     const scoreBoard = document.querySelector('#score');
-    next.setAttribute('disabled', 'true');
-    next.style.backgroundColor = '#555'
+    const scoreBoard2 = document.querySelector('#finalScore');
     section[0].style.display = 'block';
 
     var score = 0;
@@ -11,7 +10,31 @@ document.addEventListener('DOMContentLoaded', ()=>{
     scoreBoard.textContent = score;
 
     next.addEventListener('click', ()=>{
-        
+        console.log('hello');
+        if(section[0].style.display == 'block'){
+            section[0].style.display = 'none';
+            section[1].style.display = 'block';
+
+        } else if(section[1].style.display == 'block'){
+
+            section[2].style.display = 'block';
+            section[1].style.display = 'none';
+
+        } else if(section[2].style.display == 'block'){
+
+            section[3].style.display = 'block';
+            section[2].style.display = 'none';
+
+        } else if(section[3].style.display == 'block'){
+
+            section[4].style.display = 'block';
+            section[3].style.display = 'none';
+
+        } else if(section[4].style.display == 'block'){
+            section[4].style.display = 'none';
+            scoreBoard2.style.display = 'flex';
+
+        }
     })
 
     section.forEach((section)=>{
@@ -25,7 +48,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
                         form.elements[i].nextSibling.nextSibling.style.color = 'white';
                         score = score + 1;
                         scoreBoard.textContent = score;
-                        next.setAttribute('disabled', 'false');
 
                     } else if(form.elements[i].value == 'g') {
                         form.elements[i].nextSibling.nextSibling.style.backgroundColor = '#e21313';
@@ -33,7 +55,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
                         form.elements[i].previousSibling.previousSibling.previousSibling.style.backgroundColor = '#31da4d';
                         form.elements[i].previousSibling.previousSibling.previousSibling.style.color = 'white';
-                        next.setAttribute('disabled', 'false');
+                        
 
                     } else {
                         form.elements[i].nextSibling.nextSibling.style.backgroundColor = '#e21313';
@@ -44,7 +66,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
                         form.elements[i].previousSibling.previousSibling.previousSibling.
                         previousSibling.previousSibling.previousSibling.previousSibling.previousSibling.style.color = 'white';
-                        next.setAttribute('disabled', 'false');
                         
                     }
                 } else if(form.elements[i].getAttribute('name') == '2') {
