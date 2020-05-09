@@ -37,6 +37,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
             scoreBoard2.textContent = score;
             displayBoard.style.display = 'flex';
             small.style.display = 'none';
+            next.style.display = 'none';
 
         }
     })
