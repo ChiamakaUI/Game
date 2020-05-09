@@ -2,7 +2,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
     const section = document.querySelectorAll('.section');
     const next = document.querySelector('#next');
     const scoreBoard = document.querySelector('#score');
+    const small = document.querySelector('#small');
     const scoreBoard2 = document.querySelector('#finalScore');
+    const displayBoard = document.querySelector('#displayBoard');
     section[0].style.display = 'block';
 
     var score = 0;
@@ -32,7 +34,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
         } else if(section[4].style.display == 'block'){
             section[4].style.display = 'none';
-            scoreBoard2.style.display = 'flex';
+            scoreBoard2.textContent = score;
+            displayBoard.style.display = 'flex';
+            small.style.display = 'none';
 
         }
     })
