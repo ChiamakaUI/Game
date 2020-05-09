@@ -29,12 +29,12 @@
             Which of these is a Disney Animation?
         </p>
         <form>
+            <input type="radio" name="2" value="f">
+            <label for="name">Finding Nemo</label><br />
             <input type="radio" name="2" value="l">
             <label for="name">Locating Remo</label><br />
             <input type="radio" name="2" value="d">
             <label for="name">Discovering Remo</label><br />
-            <input type="radio" name="2" value="f">
-            <label for="name">Finding Nemo</label><br />
         </form>
     </div>
 
@@ -57,12 +57,12 @@
             Which boxer was known as “The Greatest” and “The People’s Champion”?
         </p>
         <form>
+            <input type="radio" name="4" value="m">
+            <label for="name">Muhammad Ali</label><br />
             <input type="radio" name="4" value="r">
             <label for="name">Ray Leonard</label><br />
             <input type="radio" name="4" value="f">
             <label for="name">Floyd Mayweather</label><br />
-            <input type="radio" name="4" value="m">
-            <label for="name">Muhammad Ali</label><br />
         </form>
     </div>
 
@@ -86,6 +86,11 @@
 
     <div>
         <h3 id="score"></h3>
+    </div>
+
+    <div id="displayBoard" style="display: none; justify-content: center; margin: 20px;">
+        <p style="font-size: x-large;">Your Final Score </p>
+        <h1 id="finalScore"></h1>
     </div>
 <script src="script.js"></script>
 </body>
